@@ -1,47 +1,47 @@
 # X-UI
-简体中文|[ENGLISH](./README_EN.md)  
+فارسی|[ENGLISH](./README_EN.md)  
+ایکس ری پنل فارسی
+> این پروژه برای آموزش  شخصی و ارتباطات طراحی شده لطفا برای مقاصد سیاسی از این سورس استفاده نکنید
 
-> 免责声明：该项目仅供个人学习、交流，请勿用于非法用途，请勿用于生产环境  
+پشتیبانی از تک پورت , چند پورت , چند پروتکله پنل ایکس ری
+با استفاده از این سورس میتونید سرویس پروکسی خودتون رو از طریق بات رایگان تلگرام مدیریت کنید   
+برای آموزش های بیشتر لطفا به این لینک مراجعه کنید(https://coderfan.net/how-to-use-x-ui-pannel-to-set-up-proxies-for-bypassing-gfw.html)  
+همه میتونن از این سورس استفاده کنن نظرات خودشون رو بیان کنن یا به بهبود پروژه کمک کنند 
+اگر فکر میکنید این پروژه برای شما کاربردی و مفید است با امتیاز دادن به من منو همراهی کنید
+یا اگر شما قصد خرید سروری برای راه اندازی این سورس را دارید میتوانید از لینک های آخر همین صفحه خرید خودتون رو انجام بدید 
 
-支持单端口多用户、多协议的 xray 面板，究极缝合怪    
-通过免费的Telegram bot方便快捷地进行监控、管理你的代理服务  
-具体使用教程可以参考个人博客文章[链接](https://coderfan.net/how-to-use-x-ui-pannel-to-set-up-proxies-for-bypassing-gfw.html)  
-欢迎大家使用并反馈意见或提交Pr,帮助项目更好的改善  
-如果您觉得本项目对您有所帮助,不妨给个star:star2:支持我  
-或者你恰巧有购买服务器的需求,可以通过文末的赞助部分支持我~ 
+#فهرست اسناد
+- [معرفی تابع] (#معرفی تابع)
+- [نصب با یک کلیک] (#نصب با یک کلیک)
+- [پیش نمایش جلوه] (#پیش نمایش اثر)
+- [میانبر] (#میانبر)
+- [changelog] (#changelog)
 
-# 文档目录  
-- [功能介绍](#功能介绍)  
-- [一键安装](#一键安装)  
-- [效果预览](#效果预览)  
-- [快捷方式](#快捷方式)  
-- [变更记录](#变更记录)
+# امکانات
 
-# 功能介绍
+- نظارت بر وضعیت سیستم
+- پشتیبانی تک پورت چند کاربر، چند پروتکل، عملیات تجسم صفحه وب
+- vmess、vless、trojan、shadowsocks、shadowsocks 2022、dokodemo-door、socks、http پروتکل های پشتیبانی شده
+- پشتیبانی از تنظیمات بیشتر برای راحتی شما：http、tcp、ws、grpc、kcp、quic
+- آمار ترافیک، محدودیت ترافیک، محدودیت زمان انقضا، تنظیم مجدد یک کلید و نظارت بر دستگاه
+- قالب های پیکربندی xray قابل تنظیم
+-  پشتیبانی از پنل دسترسی https (نام دامنه + گواهی ssl خود را بیاورید)
+- پشتیبانی از برنامه گواهینامه SSL با یک کلیک و تمدید خودکار
+- اعلان ربات تلگرام، امکان کنترل کردن سرور
+- برای موارد پیکربندی پیشرفته تر، لطفاً به پنل مراجعه کنید
 
-- 系统状态监控
-- 支持单端口多用户、多协议，网页可视化操作
-- 支持的协议：vmess、vless、trojan、shadowsocks、shadowsocks 2022、dokodemo-door、socks、http
-- 支持配置更多传输配置：http、tcp、ws、grpc、kcp、quic
-- 流量统计，限制流量，限制到期时间，一键重置与设备监控
-- 可自定义 xray 配置模板
-- 支持 https 访问面板（自备域名 + ssl 证书）
-- 支持一键SSL证书申请且自动续签
-- Telegram bot通知、控制功能
-- 更多高级配置项，详见面板 
-
-:bulb:具体**使用、配置细节以及问题排查**请点击这里:point_right:[WIKI](https://github.com/FranzKafkaYu/x-ui/wiki):point_left:  
+:bulb:برای **استفاده خاص، جزئیات پیکربندی و عیب یابی** لطفا اینجا را کلیک کنید:point_right:[WIKI](https://github.com/FranzKafkaYu/x-ui/wiki):point_left:  
  Specific **Usages、Configurations and Debug** please refer to [WIKI](https://github.com/FranzKafkaYu/x-ui/wiki)    
-# 一键安装
-在安装前请确保你的系统支持`bash`环境,且系统网络正常  
-
-&#x26A1;从原版升级也可使用该命令，数据不会丢失&#x26A1;
-
-```
-bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
+# یک نصب کلیدی
+قبل از نصب مطمعن بشید که سرور شما از دستور
+bash
+پشتیبانی میکند و آپدیت های لازم را انجام داده اید 
+اگر مطمعن نیستید این دستورات را تایپ کنید قبل از نصب
+apt-get update -y && apt-get upgrade -y
+apt install curl -y
 ```    
-For English Users,please use the following command to install English supported version:  
-```
+برای نصب لطفا دستور زیر رو بعد از دستورات بالا روی سرور خودتون کپی پیست کنید
+
 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install_en.sh)
 ```    
 # 效果预览  
